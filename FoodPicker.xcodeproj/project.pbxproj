@@ -12,6 +12,8 @@
 		5C1FCD672ACEB0DF00FD6215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FCD662ACEB0DF00FD6215 /* Assets.xcassets */; };
 		5C1FCD6A2ACEB0DF00FD6215 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FCD692ACEB0DF00FD6215 /* Preview Assets.xcassets */; };
 		5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B12E2ACECF4B00DD1FC9 /* Food.swift */; };
+		5C54B1312ACEE74100DD1FC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1302ACEE74100DD1FC9 /* Extensions.swift */; };
+		5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		5C1FCD662ACEB0DF00FD6215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C1FCD692ACEB0DF00FD6215 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C54B12E2ACECF4B00DD1FC9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		5C54B1302ACEE74100DD1FC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				5C1FCD622ACEB0DE00FD6215 /* FoodPickerApp.swift */,
 				5C1FCD642ACEB0DE00FD6215 /* ContentView.swift */,
 				5C54B12E2ACECF4B00DD1FC9 /* Food.swift */,
+				5C54B1302ACEE74100DD1FC9 /* Extensions.swift */,
+				5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */,
 				5C1FCD662ACEB0DF00FD6215 /* Assets.xcassets */,
 				5C1FCD682ACEB0DF00FD6215 /* Preview Content */,
 			);
@@ -143,6 +149,8 @@
 				5C1FCD652ACEB0DE00FD6215 /* ContentView.swift in Sources */,
 				5C1FCD632ACEB0DE00FD6215 /* FoodPickerApp.swift in Sources */,
 				5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */,
+				5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */,
+				5C54B1312ACEE74100DD1FC9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
