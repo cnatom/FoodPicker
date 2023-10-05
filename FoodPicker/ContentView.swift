@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedFood: Food? = Food.examples.first
+
+    @State var selectedFood: Food?
 
     var body: some View {
         VStack(spacing: 20) {
@@ -16,7 +17,7 @@ struct ContentView: View {
             Group{
                 if selectedFood != nil {
                     Text(selectedFood!.image)
-                        .font(.system(size: 200))
+                        .font(.system(size: 250))
                         .minimumScaleFactor(0.5) // 放不下的时候缩放倍数
                         .lineLimit(1)
                         .id(selectedFood!.name)
@@ -26,7 +27,7 @@ struct ContentView: View {
                         .scaledToFit()
                 }
             }
-            .frame(maxHeight: 200)
+            .frame(maxHeight: 250)
 
             Text("今天吃什么？")
                 .fontWeight(.bold)
@@ -71,6 +72,8 @@ struct ContentView: View {
         .animation(.easeInOut, value: selectedFood)
     }
 }
+
+
 
 #Preview {
     ContentView()
