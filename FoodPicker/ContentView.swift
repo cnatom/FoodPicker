@@ -24,16 +24,23 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.accentColor)
+                    .id(selectedFood)
+                    .transition(.asymmetric(insertion: .opacity.animation(.easeInOut), removal: .opacity.animation(.easeInOut)))
+//                    .transition(.slide.combined(with: .scale))
             }
 
             Button{
-                selectedFood = food.shuffled().first
+//                withAnimation {
+//                    selectedFood = food.shuffled().first{$0 != selectedFood}
+//                }
+                selectedFood = food.shuffled().first{$0 != selectedFood}
             } label: {
-                Text("今天吃什么?")
+                Text(selectedFood == nil ? "告诉我" : "换一个")
                     .frame(width: 200)
+                    .transformEffect(.identity)
             }
             .buttonStyle(.borderedProminent)
-                     
+
             Button{
                 selectedFood = nil
             }label: {
@@ -48,7 +55,6 @@ struct ContentView: View {
         .buttonStyle(.bordered)
         .buttonBorderShape(.capsule)
         .controlSize(.large)
-
         .animation(.easeInOut,value: selectedFood)
     }
 }
