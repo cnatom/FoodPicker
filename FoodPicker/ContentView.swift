@@ -43,12 +43,12 @@ struct ContentView: View {
 private extension ContentView {
     var foodImage: some View {
         Group {
-            if selectedFood != nil {
-                Text(selectedFood!.image)
+            if let selectedFood {
+                Text(selectedFood.image)
                     .font(.system(size: 250))
                     .minimumScaleFactor(0.5) // 放不下的时候缩放倍数
                     .lineLimit(1)
-                    .id(selectedFood!.name)
+                    .id(selectedFood.name)
             } else {
                 Image("dinner")
                     .resizable()
@@ -59,13 +59,13 @@ private extension ContentView {
     }
 
     @ViewBuilder var selectedFoodInfoView: some View {
-        if selectedFood != nil {
+        if let selectedFood {
             HStack {
-                Text(selectedFood?.name ?? "")
+                Text(selectedFood.name)
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.accentColor)
-                    .id(selectedFood?.name)
+                    .id(selectedFood.name)
                     .transition(.delayInsertionOpacity)
                 //                    .transition(.slide.combined(with: .scale))
                 Button {
@@ -76,7 +76,7 @@ private extension ContentView {
                 }
                 .buttonStyle(.plain)
             }
-            Text("热量 \(selectedFood!.$calorie)")
+            Text("热量 \(selectedFood.$calorie)")
 
             selectedFoodDetailInfoView
         }

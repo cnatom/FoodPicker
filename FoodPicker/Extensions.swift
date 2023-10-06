@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-
 extension View {
     func mainButtonStyle() -> some View {
         buttonStyle(.bordered)
             .buttonBorderShape(.capsule)
             .controlSize(.large)
     }
-    
-    func roundedRectBackground(radius: CGFloat = 8,color: Color = Color.bg) -> some View {
+
+    func roundedRectBackground(radius: CGFloat = 8, color: Color = Color.bg) -> some View {
         background(RoundedRectangle(cornerRadius: radius).foregroundColor(color))
     }
 }
@@ -26,8 +25,9 @@ extension Animation {
 }
 
 extension Color {
-    static let bg = Color(.systemBackground)
-    static let bg2 = Color(.secondarySystemBackground)
+    static var bg: Color { Color(.systemBackground) }
+    static var bg2: Color { Color(.secondarySystemBackground) }
+    static var groupBg: Color { Color(.systemGroupedBackground) }
 }
 
 extension AnyTransition {

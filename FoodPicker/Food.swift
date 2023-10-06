@@ -5,8 +5,11 @@
 //  Created by atom on 2023/10/5.
 //
 
+import Foundation
 
-struct Food: Equatable {
+struct Food: Equatable,Identifiable {
+    
+    let id = UUID()
     
     var name: String
     var image: String
