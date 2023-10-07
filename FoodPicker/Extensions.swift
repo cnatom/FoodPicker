@@ -17,12 +17,6 @@ extension View {
     func roundedRectBackground(radius: CGFloat = 8, color: Color = Color.bg) -> some View {
         background(RoundedRectangle(cornerRadius: radius).foregroundColor(color))
     }
-    
-    func testBG()-> some View{
-        self.background{
-            Color.green
-        }
-    }
 }
 
 extension Animation {
