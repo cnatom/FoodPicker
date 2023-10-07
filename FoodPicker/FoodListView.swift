@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+
+
+
 struct FoodListView: View {
     @Environment(\.editMode) var editMode
     @State private var food = Food.examples
     @State private var selectedFood = Set<Food.ID>()
+    
+    @State private var shouldShowSheet = false
+    @State private var foodDetailHeight:CGFloat = PreferenceSheetSizeKey.defaultValue
 
     var isEditing: Bool {
         editMode?.wrappedValue == EditMode.active
@@ -19,40 +25,76 @@ struct FoodListView: View {
     var body: some View {
         VStack {
             titleBar
-
             List($food, editActions: .all, selection: $selectedFood) { $food in
-                Text(food.name)
-                    .padding(.vertical, 10)
+                HStack {
+                    Text(food.name)
+                        .padding(.vertical, 10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle()) // 确保足够的触碰面积
+                        .onTapGesture {
+                            if isEditing{ return }
+                            shouldShowSheet = true
+                    }
+                    if isEditing{
+                        Image(systemName: "pencil")
+                            .transition(.slide.animation(.easeInOut))
+                    }
+                }
+   
             }
             .listStyle(.plain)
-            .padding(.horizontal)
+
         }
         .background(Color.groupBg)
         .safeAreaInset(edge: .bottom, content: buildFloatButton)
-        .sheet(isPresented: .constant(true), content: {
-            let food = food.first!
+        .sheet(isPresented: $shouldShowSheet, content: {
+
+            let food = food[4]
             let shouldVStack = food.image.count > 1
-            let layout = shouldVStack ? AnyLayout(VStackLayout(spacing: 30)) : AnyLayout(HStackLayout(spacing: 30)) // 根据内容修改排版
             
-            AnyLayout.useVStack(if: shouldVStack, spacing: 30) {
+            AnyLayout.useVStack(if: shouldVStack, spacing: 20) {
                 Text(food.image)
                     .font(.system(size: 100))
                     .lineLimit(1)
-                    .minimumScaleFactor(0.2)
-                VStack {
+                    .minimumScaleFactor(shouldVStack ? 1 : 0.2)
+                    
+                VStack(spacing:10) {
                     buildNutritionView(title: "热量", value: food.$calorie)
                     buildNutritionView(title: "蛋白质", value: food.$protein)
                     buildNutritionView(title: "脂肪", value: food.$fat)
                     buildNutritionView(title: "碳水", value: food.$carb)
                 }
             }
-            .font(.title2)
             .padding()
+            .overlay{
+                GeometryReader{ proxy in
+                    Color.clear
+                        .preference(key: PreferenceSheetSizeKey.self, value: proxy.size.height)
+                }
+            }
             .roundedRectBackground()
             .transition(.moveUpWithOpacity)
-            .presentationDetents([.medium])
+            .presentationDetents([.height(foodDetailHeight)])
+            .onPreferenceChange(PreferenceSheetSizeKey.self, perform: { value in
+                foodDetailHeight = value
+            })
+            
         })
     }
+}
+
+private extension FoodListView{
+    struct PreferenceSheetSizeKey: PreferenceKey{
+        
+        typealias Value = CGFloat
+        
+        static var defaultValue: CGFloat = 0.0
+        
+        static func reduce(value: inout Value, nextValue: () -> Value) {
+            value = nextValue()
+        }
+    }
+
 }
 
 extension AnyLayout {
@@ -69,7 +111,7 @@ private extension FoodListView {
             Spacer()
             Text(value)
         }
-        .padding(.horizontal)
+        .padding(.horizontal,30)
     }
 
     var titleBar: some View {
