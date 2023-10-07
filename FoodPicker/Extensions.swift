@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension View {
-    func mainButtonStyle() -> some View {
-        buttonStyle(.bordered)
-            .buttonBorderShape(.capsule)
+    func mainButtonStyle(shape: ButtonBorderShape = .capsule) -> some View {
+        buttonStyle(.borderedProminent)
+            .buttonBorderShape(shape)
             .controlSize(.large)
     }
 
