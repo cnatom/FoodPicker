@@ -17,9 +17,9 @@ extension View {
     func roundedRectBackground(radius: CGFloat = 8, color: Color = Color.bg) -> some View {
         background(RoundedRectangle(cornerRadius: radius).foregroundColor(color))
     }
-    
-    func testBG()-> some View{
-        self.background{
+
+    func testBG() -> some View {
+        background {
             Color.green
         }
     }
@@ -30,7 +30,7 @@ extension Animation {
     static let myEase = Animation.easeInOut(duration: 0.6)
 }
 
-extension Color {
+extension ShapeStyle where Self == Color {
     static var bg: Color { Color(.systemBackground) }
     static var bg2: Color { Color(.secondarySystemBackground) }
     static var groupBg: Color { Color(.systemGroupedBackground) }
