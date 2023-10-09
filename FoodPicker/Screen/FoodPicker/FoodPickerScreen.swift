@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct FoodPickerScreen: View {
     @State private var selectedFood: Food?
     @State private var shouldShowInfo: Bool = false
 
@@ -28,7 +28,8 @@ struct ContentView: View {
                 cancelButton
             }
             .padding()
-            .frame(maxWidth: .infinity, minHeight: UIScreen.main.bounds.height - 100)
+            .maxWidth()
+            .frame(minHeight: UIScreen.main.bounds.height - 100)
             .font(.title)
             .mainButtonStyle()
             .animation(.mySpring, value: shouldShowInfo)
@@ -40,7 +41,7 @@ struct ContentView: View {
 
 // MARK: - Subviews
 
-private extension ContentView {
+private extension FoodPickerScreen {
     var foodImage: some View {
         Group {
             if let selectedFood {
@@ -71,7 +72,7 @@ private extension ContentView {
                 Button {
                     shouldShowInfo.toggle()
                 } label: {
-                    Image(systemName: "info.circle.fill")
+                    SFSymbol.info
                         .foregroundColor(.secondary)
                 }
                 .buttonStyle(.plain)
@@ -112,7 +113,7 @@ private extension ContentView {
                 .transition(.moveUpWithOpacity)
             }
         }
-        .frame(maxWidth: .infinity)
+        .maxWidth()
         .clipped() // 动画开始时防止与上方view重叠
     }
 
@@ -140,16 +141,12 @@ private extension ContentView {
     }
 }
 
-extension ContentView {
+extension FoodPickerScreen {
     init(selectedFood: Food) {
         _selectedFood = .init(wrappedValue: selectedFood)
     }
 }
 
 #Preview {
-    ContentView()
-}
-
-extension PreviewDevice {
-    static let iPad = PreviewDevice(rawValue: "iPad (10th generation)")
+    FoodPickerScreen()
 }

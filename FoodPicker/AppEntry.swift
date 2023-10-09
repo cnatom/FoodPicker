@@ -9,10 +9,10 @@
 import SwiftUI
 
 @main
-struct FoodPickerApp: App {
+struct AppEntry: App {
     var body: some Scene {
         WindowGroup {
-            FoodListView()
+            FoodListScreen()
         }
     }
 }
