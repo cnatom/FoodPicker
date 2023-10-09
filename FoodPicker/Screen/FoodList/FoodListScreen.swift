@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct FoodListScreen: View {
-    @Environment(\.editMode) var editMode
+    @State private var editMode: EditMode = .inactive
     @State private var food = Food.examples
     @State private var selectedFoodID = Set<Food.ID>()
-
     @State private var mysheet: Sheet?
 
-    var isEditing: Bool {
-        editMode?.wrappedValue == EditMode.active
-    }
+    var isEditing: Bool { editMode.isEditing }
 
     var body: some View {
-        VStack {
+        return VStack {
             titleBar
+            
             List($food, editActions: .all, selection: $selectedFoodID, rowContent: buildFoodRow)
+                .background{
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.groupBg2)
+                        .ignoresSafeArea(.container,edges: .bottom)
+                }
                 .listStyle(.plain)
+                .padding(.horizontal)
         }
         .background(Color.groupBg)
+        .environment(\.editMode, $editMode)
         .safeAreaInset(edge: .bottom, content: buildFloatButton)
         .sheet(item: $mysheet)
     }
@@ -43,6 +48,7 @@ private extension FoodListScreen {
 
             EditButton()
                 .buttonStyle(.bordered)
+            addButton
         }
         .padding()
     }
@@ -52,8 +58,7 @@ private extension FoodListScreen {
             mysheet = .newFood { self.food.append($0) }
         } label: {
             SFSymbol.plus
-                .font(.system(size: 50))
-                .padding()
+                .font(.system(size: 40))
                 .symbolRenderingMode(.palette)
                 .foregroundStyle(.white, Color.accentColor)
         }
@@ -74,16 +79,11 @@ private extension FoodListScreen {
     }
 
     func buildFloatButton() -> some View {
-        ZStack(alignment: .trailing) {
-            removeButton
-                .opacity(isEditing ? 1 : 0)
-                .transition(.move(edge: .leading).combined(with: .opacity).animation(.easeInOut))
-                .id(isEditing)
-            addButton
-                .opacity(isEditing ? 0 : 1)
-                .transition(.scale.combined(with: .opacity).animation(.easeInOut))
-                .id(isEditing)
-        }
+        removeButton
+            .opacity(isEditing ? 1 : 0)
+            .transition(.move(edge: .leading).combined(with: .opacity).animation(.easeInOut))
+            .id(isEditing)
+            .padding(.bottom)
     }
 
     func buildFoodRow(foodBinding: Binding<Food>) -> some View {
@@ -91,6 +91,7 @@ private extension FoodListScreen {
         return HStack {
             Text(food.name)
                 .padding(.vertical, 10)
+                .font(.title3)
                 .push(to: .leading)
                 .contentShape(Rectangle()) // 确保足够的触碰面积
                 .onTapGesture {
@@ -111,7 +112,7 @@ private extension FoodListScreen {
                         mysheet = .editFood(foodBinding)
                     }
             }
-        }
+        }.listRowBackground(Color.clear)
     }
 }
 

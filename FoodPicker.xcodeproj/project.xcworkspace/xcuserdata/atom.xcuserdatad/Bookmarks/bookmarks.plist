@@ -149,16 +149,12 @@ private extension TextField where Label == Text{
 			<dict>
 				<key>location-parameters</key>
 				<dict>
-					<key>EndingColumnNumber</key>
-					<string>14</string>
 					<key>EndingLineNumber</key>
-					<string>10</string>
-					<key>StartingColumnNumber</key>
-					<string>9</string>
+					<string>40</string>
 					<key>StartingLineNumber</key>
-					<string>10</string>
+					<string>40</string>
 					<key>Timestamp</key>
-					<string>718562108.28404</string>
+					<string>718566918.691873</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -174,16 +170,13 @@ private extension TextField where Label == Text{
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>Sheet</string>
+				<string></string>
 				<key>leading</key>
-				<string>
-extension FoodListScreen {
-    enum </string>
-				<key>trailing</key>
-				<string>: View, Identifiable {
-        case newFood((Food) -&gt; Void)
-        case editFood(Binding&lt;Food&gt;)
+				<string>    }
+}
 </string>
+				<key>trailing</key>
+				<string></string>
 			</dict>
 			<key>title</key>
 			<string>将enum当做View来使用</string>
@@ -196,15 +189,15 @@ extension FoodListScreen {
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>18</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>26</string>
+					<string>48</string>
 					<key>StartingColumnNumber</key>
-					<string>9</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>26</string>
+					<string>48</string>
 					<key>Timestamp</key>
-					<string>718562174.59114</string>
+					<string>718567247.698386</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -220,16 +213,13 @@ extension FoodListScreen {
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>resizable</string>
+				<string></string>
 				<key>leading</key>
 				<string>    }
-    
-    func </string>
-				<key>trailing</key>
-				<string>() -&gt; Image{
-        self.body.resizable()
-    }
+}
 </string>
+				<key>trailing</key>
+				<string></string>
 			</dict>
 			<key>title</key>
 			<string>将enum扩展为View并转为Image使用</string>
@@ -371,6 +361,99 @@ extension AnyLayout {
 			</dict>
 			<key>title</key>
 			<string>根据内容修改排版</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>32</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>31</string>
+					<key>Timestamp</key>
+					<string>718571908.231981</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FoodPicker/Screen/FoodList/FoodListScreen.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>        .environment(\.editMode, $editMode)
+</string>
+				<key>leading</key>
+				<string>        }
+        .background(Color.groupBg)
+</string>
+				<key>trailing</key>
+				<string>        .safeAreaInset(edge: .bottom, content: buildFloatButton)
+        .sheet(item: $mysheet)
+    }
+</string>
+			</dict>
+			<key>title</key>
+			<string>解决TabView子页面中@Environment(\.editMode)失灵的问题</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>12</string>
+					<key>EndingLineNumber</key>
+					<string>10</string>
+					<key>StartingColumnNumber</key>
+					<string>9</string>
+					<key>StartingLineNumber</key>
+					<string>10</string>
+					<key>Timestamp</key>
+					<string>718572095.275269</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>FoodPicker/Screen/HomeScreen.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>Tab</string>
+				<key>leading</key>
+				<string>
+extension HomeScreen {
+    enum </string>
+				<key>trailing</key>
+				<string>: View, CaseIterable {
+        case picker, list, settings
+
+</string>
+			</dict>
+			<key>title</key>
+			<string>enum的Tab</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

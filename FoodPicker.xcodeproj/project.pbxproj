@@ -21,6 +21,8 @@
 		5C4B1B202AD4650000C573DE /* AnyLayout+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B1F2AD4650000C573DE /* AnyLayout+.swift */; };
 		5C4B1B222AD4653800C573DE /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B212AD4653800C573DE /* ShapeStyle+.swift */; };
 		5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B232AD4655000C573DE /* AnyTransition+.swift */; };
+		5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B282AD4778700C573DE /* HomeScreen.swift */; };
+		5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */; };
 		5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B12E2ACECF4B00DD1FC9 /* Food.swift */; };
 		5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */; };
 		5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */; };
@@ -42,6 +44,8 @@
 		5C4B1B1F2AD4650000C573DE /* AnyLayout+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyLayout+.swift"; sourceTree = "<group>"; };
 		5C4B1B212AD4653800C573DE /* ShapeStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		5C4B1B232AD4655000C573DE /* AnyTransition+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+.swift"; sourceTree = "<group>"; };
+		5C4B1B282AD4778700C573DE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		5C54B12E2ACECF4B00DD1FC9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 		5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
@@ -83,7 +87,6 @@
 				5C4B1B0B2AD434C900C573DE /* Extension */,
 				5C4B1B172AD4394700C573DE /* Constant */,
 				5C4B1B122AD4362B00C573DE /* Utils */,
-				5C4B1B1A2AD4529800C573DE /* Test */,
 				5C4B1B0E2AD4355500C573DE /* Resource */,
 				5C1FCD682ACEB0DF00FD6215 /* Preview Content */,
 			);
@@ -103,6 +106,8 @@
 			children = (
 				5C4B1B102AD435C800C573DE /* FoodList */,
 				5C4B1B0F2AD4359800C573DE /* FoodPicker */,
+				5C4B1B282AD4778700C573DE /* HomeScreen.swift */,
+				5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -179,13 +184,6 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
-		5C4B1B1A2AD4529800C573DE /* Test */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,10 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */,
 				5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */,
 				5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */,
 				5C4B1B142AD4370D00C573DE /* FoodDetailSheet.swift in Sources */,
 				5C4B1B052AD246A500C573DE /* FoodForm.swift in Sources */,
+				5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */,
 				5C1FCD652ACEB0DE00FD6215 /* FoodPickerScreen.swift in Sources */,
 				5C4B1B1C2AD4646E00C573DE /* View+.swift in Sources */,
 				5C1FCD632ACEB0DE00FD6215 /* AppEntry.swift in Sources */,

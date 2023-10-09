@@ -15,13 +15,13 @@ extension FoodListScreen {
 
         //    var id: UUID { UUID() }
 
-        var id: UUID {
+        var id: Food.ID {
             switch self {
-            case .newFood:
+            case .newFood: 
                 return UUID()
-            case let .editFood(binding):
+            case let .editFood(binding): 
                 return binding.wrappedValue.id
-            case let .foodDetail(food):
+            case let .foodDetail(food): 
                 return food.id
             }
         }

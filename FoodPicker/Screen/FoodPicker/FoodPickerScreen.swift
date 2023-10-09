@@ -13,29 +13,29 @@ struct FoodPickerScreen: View {
     @State private var shouldShowInfo: Bool = false
 
     var body: some View {
-        ScrollView {
+        GeometryReader { proxy in
             VStack(spacing: 20) {
                 foodImage
-
-                Text("今天吃什么？").bold()
-
+                
+                Text("今天吃什么？").font(.title.bold())
+                
                 selectedFoodInfoView
-
+                
                 Spacer()
-
+                
                 selectFoodButton
-
+                
                 cancelButton
             }
             .padding()
             .maxWidth()
-            .frame(minHeight: UIScreen.main.bounds.height - 100)
-            .font(.title)
+            .frame(minHeight: proxy.size.height)
+            .font(.title2)
             .mainButtonStyle()
             .animation(.mySpring, value: shouldShowInfo)
             .animation(.myEase, value: selectedFood)
+            .background(Color.bg2)
         }
-        .background(Color.bg2)
     }
 }
 
@@ -138,6 +138,7 @@ private extension FoodPickerScreen {
         } label: {
             Text("重置").frame(width: 200)
         }
+        .buttonStyle(.bordered)
     }
 }
 
