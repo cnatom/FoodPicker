@@ -30,8 +30,6 @@ struct FoodListScreen: View {
     }
 }
 
-// MARK: Sheet
-
 // MARK: SubView
 
 private extension FoodListScreen {
