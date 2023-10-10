@@ -39,9 +39,21 @@ extension View {
             return frame(maxWidth: .infinity,alignment: .trailing)
         }
     }
+    
     // NOTE: 给文档加链接
     /// Shortcut: [push(to: .center)](x-source-tag://push)
     func maxWidth() -> some View{
         push(to: .center)
+    }
+    
+    // NOTE: KeyPath应用，膜拜
+    func readGeometry<K:PreferenceKey,Value>(_ keyPath: KeyPath<GeometryProxy,Value>,key: K.Type) -> some View where K.Value == Value{
+        overlay {
+            GeometryReader { proxy in
+                Color.clear
+                    .preference(key: key,
+                                value: proxy[keyPath: keyPath])
+            }
+        }
     }
 }

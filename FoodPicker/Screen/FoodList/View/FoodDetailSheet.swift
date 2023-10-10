@@ -60,18 +60,3 @@ extension FoodListScreen {
         }
     }
 }
-
-extension View{
-    
-    // NOTE: KeyPath应用，膜拜
-    func readGeometry<K:PreferenceKey,Value>(_ keyPath: KeyPath<GeometryProxy,Value>,key: K.Type) -> some View where K.Value == Value{
-        overlay {
-            GeometryReader { proxy in
-                Color.clear
-                    .preference(key: key, 
-                                value: proxy[keyPath: keyPath])
-            }
-        }
-    }
-    
-}
