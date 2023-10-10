@@ -82,7 +82,7 @@ enum Dialog: String {
                 UserDefaults.standard.removeObject(forKey: key.rawValue)
             }
         case .resetFoodList:
-            fatalError() // TODO: 存储食物清单
+            UserDefaults.standard.removeObject(forKey: UserDefaults.Key.foodList.rawValue)
         case .inactive:
             return
         }
