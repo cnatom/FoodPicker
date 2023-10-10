@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension FoodListScreen {
+    
+    // NOTE: 将enum当做View来使用
     enum Sheet: View, Identifiable {
         case newFood((Food) -> Void)
         case editFood(Binding<Food>)

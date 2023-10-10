@@ -39,7 +39,7 @@ extension View {
             return frame(maxWidth: .infinity,alignment: .trailing)
         }
     }
-    
+    // NOTE: 给文档加链接
     /// Shortcut: [push(to: .center)](x-source-tag://push)
     func maxWidth() -> some View{
         push(to: .center)

@@ -23,6 +23,7 @@ enum SFSymbol: String {
     case gear = "gearshape"
 }
 
+// NOTE: 将enum扩展为View并转为Image使用
 extension SFSymbol: View {
     var body: Image {
         Image(systemName: rawValue)

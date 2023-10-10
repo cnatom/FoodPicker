@@ -8,7 +8,8 @@
 import SwiftUI
 
 extension HomeScreen {
-    enum Tab: View, CaseIterable {
+    // NOTE: enum的Tab
+    enum Tab: String, View, CaseIterable {
         case picker, list, settings
 
         var body: some View {
@@ -38,13 +39,23 @@ extension HomeScreen {
 }
 
 struct HomeScreen: View {
-    @State var tab: Tab = .list
+    @AppStorage(.shouldUseDarkMode) var shouldUseDarkMode = false
+    @State var tab: Tab = {
+        // NOTE: 手动读取UserDefaults中的本地数据
+        let rawValue = UserDefaults.standard.string(forKey: UserDefaults.Key.startTab.rawValue) ?? ""
+        return Tab(rawValue: rawValue) ?? .picker
+//        @AppStorage(.startTab) var tab = HomeScreen.Tab.picker
+//        return tab
+    }()
 
     var body: some View {
-        TabView(selection: $tab) {
-            ForEach(Tab.allCases, id: \.self) {
-                $0
+        NavigationView {
+            TabView(selection: $tab) {
+                ForEach(Tab.allCases, id: \.self) {
+                    $0
+                }
             }
+            .preferredColorScheme(shouldUseDarkMode ? .dark : .light)
         }
     }
 }

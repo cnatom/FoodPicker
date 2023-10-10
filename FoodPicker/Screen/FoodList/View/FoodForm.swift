@@ -13,6 +13,7 @@ private enum MyField:Int {
 }
 
 private extension TextField where Label == Text{
+    // NOTE: 自动更换键盘焦点
     func focused(_ field: FocusState<MyField?>.Binding,equals: MyField) -> some View{
         submitLabel(equals == .carb ? .done:.next)
             .focused(field, equals: equals)
@@ -91,6 +92,7 @@ extension FoodListScreen {
                 .background(.groupBg)
                 .multilineTextAlignment(.trailing)
                 .font(.title3)
+                // NOTE: 取消键盘焦点
                 .scrollDismissesKeyboard(.interactively)
                 .toolbar(content: keyboardToolBar)
             }

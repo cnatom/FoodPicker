@@ -40,9 +40,10 @@ extension FoodListScreen {
                 }
             }
             .padding()
+            .padding(.vertical)
+            .maxWidth()
+            .background(.groupBg2)
             .readGeometry(\.size.height,key: FoodDetailSheetHeightKey.self)
-            .roundedRectBackground()
-            .transition(.moveUpWithOpacity)
             .presentationDetents([.height(foodDetailHeight)])
             .onPreferenceChange(FoodDetailSheetHeightKey.self, perform: { value in
                 foodDetailHeight = value
@@ -62,6 +63,7 @@ extension FoodListScreen {
 
 extension View{
     
+    // NOTE: KeyPath应用，膜拜
     func readGeometry<K:PreferenceKey,Value>(_ keyPath: KeyPath<GeometryProxy,Value>,key: K.Type) -> some View where K.Value == Value{
         overlay {
             GeometryReader { proxy in

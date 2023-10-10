@@ -29,6 +29,7 @@ struct FoodListScreen: View {
                 .padding(.horizontal)
         }
         .background(Color.groupBg)
+        // NOTE: 解决TabView子页面中 @Environment(\.editMode)失灵的问题
         .environment(\.editMode, $editMode)
         .safeAreaInset(edge: .bottom, content: buildFloatButton)
         .sheet(item: $mysheet)

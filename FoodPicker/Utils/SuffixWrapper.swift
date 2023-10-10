@@ -5,6 +5,7 @@
 //  Created by atom on 2023/10/5.
 //
 
+// NOTE: 自定义propertyWrapper
 @propertyWrapper struct Suffix: Equatable{
     var wrappedValue: Double
     private let suffix: String
