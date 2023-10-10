@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FoodListScreen: View {
     @State private var editMode: EditMode = .inactive
-    @State private var food = Food.examples
+    @AppStorage(.foodList) private var food = Food.examples
     @State private var selectedFoodID = Set<Food.ID>()
     @State private var mysheet: Sheet?
 
@@ -18,12 +18,12 @@ struct FoodListScreen: View {
     var body: some View {
         return VStack {
             titleBar
-            
+
             List($food, editActions: .all, selection: $selectedFoodID, rowContent: buildFoodRow)
-                .background{
+                .background {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.groupBg2)
-                        .ignoresSafeArea(.container,edges: .bottom)
+                        .ignoresSafeArea(.container, edges: .bottom)
                 }
                 .listStyle(.plain)
                 .padding(.horizontal)
@@ -82,8 +82,8 @@ private extension FoodListScreen {
     func buildFloatButton() -> some View {
         removeButton
             .opacity(isEditing ? 1 : 0)
-            .transition(.move(edge: .leading).combined(with: .opacity).animation(.easeInOut))
             .id(isEditing)
+            .transition(.move(edge: .leading).combined(with: .opacity).animation(.easeInOut))
             .padding(.bottom)
     }
 

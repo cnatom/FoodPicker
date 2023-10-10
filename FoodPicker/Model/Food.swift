@@ -9,7 +9,9 @@ import Foundation
 
 struct Food: Equatable,Identifiable {
     
-    let id = UUID()
+    // NOTE: 因为需要解码之后给Food内的属性赋值，因此这里需要是var，而不是let
+    // let id = UUID()
+    var id = UUID()
     
     var name: String
     var image: String
@@ -31,4 +33,9 @@ struct Food: Equatable,Identifiable {
     ]
     
     static var new: Food { Food(name: "", image: "") }
+
+}
+
+extension Food: Codable{
+    
 }

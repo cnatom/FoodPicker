@@ -21,3 +21,8 @@
     
 }
 
+// NOTE: 因为Food需要Codable，所以Food中的wrapper @Suffix 也需要是Codable的
+extension Suffix: Codable{
+    
+}
+
