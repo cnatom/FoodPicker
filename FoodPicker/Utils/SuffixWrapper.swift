@@ -5,11 +5,13 @@
 //  Created by atom on 2023/10/5.
 //
 
+import Foundation
+
 // NOTE: 自定义propertyWrapper
 // NOTE: propertyWrapper泛型
 @propertyWrapper struct Suffix<Unit: MyUnitProtocol & Equatable>: Equatable {
     var wrappedValue: Double
-    private let unit: Unit
+    var unit: Unit
 
     init(wrappedValue: Double, _ unit: Unit) {
         self.wrappedValue = wrappedValue
@@ -17,11 +19,15 @@
     }
 
     var projectedValue: Self {
-        self
+        get {self}
+        set {self = newValue}
     }
 
     var description: String {
-        wrappedValue.formatted(.number.precision(.fractionLength(0 ... 1))) + " \(unit.rawValue)"
+        let preferedUnit = Unit.getPreferredUnit()
+        let measurement = Measurement(value: wrappedValue, unit: unit.dimention)
+        let converted = measurement.converted(to: preferedUnit.dimention)
+        return converted.value.formatted(.number.precision(.fractionLength(0 ... 1))) + " \(preferedUnit.localizedSymbol)"
     }
 }
 

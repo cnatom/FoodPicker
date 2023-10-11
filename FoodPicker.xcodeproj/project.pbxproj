@@ -23,7 +23,7 @@
 		5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B232AD4655000C573DE /* AnyTransition+.swift */; };
 		5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B282AD4778700C573DE /* HomeScreen.swift */; };
 		5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */; };
-		5C4B1B2E2AD5044900C573DE /* MyWeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */; };
+		5C4B1B2E2AD5044900C573DE /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2D2AD5044900C573DE /* Unit.swift */; };
 		5C4B1B302AD5049300C573DE /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */; };
 		5C4B1B322AD504FC00C573DE /* AppStorage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B312AD504FC00C573DE /* AppStorage+.swift */; };
 		5C4B1B342AD555D400C573DE /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B332AD555D400C573DE /* Array+.swift */; };
@@ -31,6 +31,7 @@
 		5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B12E2ACECF4B00DD1FC9 /* Food.swift */; };
 		5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */; };
 		5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */; };
+		5C6290092AD6E21C00126370 /* MyUnitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6290082AD6E21C00126370 /* MyUnitProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,7 @@
 		5C4B1B282AD4778700C573DE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		5C4B1B2C2AD4E88F00C573DE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightUnit.swift; sourceTree = "<group>"; };
+		5C4B1B2D2AD5044900C573DE /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		5C4B1B312AD504FC00C573DE /* AppStorage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStorage+.swift"; sourceTree = "<group>"; };
 		5C4B1B332AD555D400C573DE /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		5C54B12E2ACECF4B00DD1FC9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 		5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
+		5C6290082AD6E21C00126370 /* MyUnitProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUnitProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */,
+				5C6290082AD6E21C00126370 /* MyUnitProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -214,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4B1B182AD4395B00C573DE /* SFSymbol.swift */,
-				5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */,
+				5C4B1B2D2AD5044900C573DE /* Unit.swift */,
 				5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */,
 			);
 			path = Constant;
@@ -331,7 +334,7 @@
 				5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */,
 				5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */,
 				5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */,
-				5C4B1B2E2AD5044900C573DE /* MyWeightUnit.swift in Sources */,
+				5C4B1B2E2AD5044900C573DE /* Unit.swift in Sources */,
 				5C4B1B142AD4370D00C573DE /* FoodDetailSheet.swift in Sources */,
 				5C4B1B052AD246A500C573DE /* FoodForm.swift in Sources */,
 				5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */,
@@ -341,6 +344,7 @@
 				5C4B1B1C2AD4646E00C573DE /* View+.swift in Sources */,
 				5C1FCD632ACEB0DE00FD6215 /* AppEntry.swift in Sources */,
 				5C4B1B162AD4378500C573DE /* Sheet.swift in Sources */,
+				5C6290092AD6E21C00126370 /* MyUnitProtocol.swift in Sources */,
 				5C4B1B342AD555D400C573DE /* Array+.swift in Sources */,
 				5C4B1B0D2AD434EB00C573DE /* PreviewDevice+.swift in Sources */,
 				5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */,

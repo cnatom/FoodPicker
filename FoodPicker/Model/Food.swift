@@ -45,13 +45,14 @@ extension Food {
         Food(name: "牛肉面", image: "🐄🍜", calorie: 219, carb: 33, fat: 5, protein: 9),
         Food(name: "关东煮", image: "🥘", calorie: 80, carb: 4, fat: 4, protein: 6),
     ]
-
+    
+    /// - Tag: getPreferredUnit
     static var new: Food {
-        // 读取存储在本地的单位信息
-        @AppStorage(.perferredEnergyUnit) var energyUnit: MyEnergyUnit = .cal
-        @AppStorage(.perferredWeightUnit) var weightUnit: MyWeightUnit = .gram
+        /// 读取存储在本地的单位信息
+        let preferredEnergyUnit = MyEnergyUnit.getPreferredUnit()
+        let preferredWeightUnit = MyWeightUnit.getPreferredUnit()
         
-        return Food(name: "", image: "", calorie: .init(wrappedValue: 0.0, .cal), carb: .init(wrappedValue: 0.0, .gram), fat: .init(wrappedValue: 0.0, .gram), protein: .init(wrappedValue: 0.0, .gram))
+        return Food(name: "", image: "", calorie: .init(wrappedValue: 0.0, preferredEnergyUnit), carb: .init(wrappedValue: 0.0, preferredWeightUnit), fat: .init(wrappedValue: 0.0, preferredWeightUnit), protein: .init(wrappedValue: 0.0, preferredWeightUnit))
     }
 }
 

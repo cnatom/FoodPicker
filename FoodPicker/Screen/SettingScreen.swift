@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingScreen: View {
     @AppStorage(.shouldUseDarkMode) private var shouldUseDarkMode: Bool = false
-    @AppStorage(.unit) private var unit: MyWeightUnit = .gram
+    @AppStorage(.perferredWeightUnit) private var unit: MyWeightUnit
     @AppStorage(.startTab) private var startTab: HomeScreen.Tab = .picker
     @State private var confirmationDialog: Dialog = .inactive
 
