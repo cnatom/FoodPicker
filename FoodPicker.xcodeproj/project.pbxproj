@@ -23,14 +23,25 @@
 		5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B232AD4655000C573DE /* AnyTransition+.swift */; };
 		5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B282AD4778700C573DE /* HomeScreen.swift */; };
 		5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */; };
-		5C4B1B2E2AD5044900C573DE /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2D2AD5044900C573DE /* Unit.swift */; };
+		5C4B1B2E2AD5044900C573DE /* MyWeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */; };
 		5C4B1B302AD5049300C573DE /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */; };
 		5C4B1B322AD504FC00C573DE /* AppStorage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B312AD504FC00C573DE /* AppStorage+.swift */; };
 		5C4B1B342AD555D400C573DE /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B332AD555D400C573DE /* Array+.swift */; };
+		5C4B1B3C2AD5610600C573DE /* FoodPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B1B3B2AD5610600C573DE /* FoodPickerTests.swift */; };
 		5C54B12F2ACECF4B00DD1FC9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B12E2ACECF4B00DD1FC9 /* Food.swift */; };
 		5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */; };
 		5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C4B1B3D2AD5610600C573DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C1FCD572ACEB0DE00FD6215 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1FCD5E2ACEB0DE00FD6215;
+			remoteInfo = FoodPicker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5C1FCD5F2ACEB0DE00FD6215 /* FoodPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,10 +62,12 @@
 		5C4B1B282AD4778700C573DE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5C4B1B2A2AD4872B00C573DE /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		5C4B1B2C2AD4E88F00C573DE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		5C4B1B2D2AD5044900C573DE /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeightUnit.swift; sourceTree = "<group>"; };
 		5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		5C4B1B312AD504FC00C573DE /* AppStorage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStorage+.swift"; sourceTree = "<group>"; };
 		5C4B1B332AD555D400C573DE /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4B1B3B2AD5610600C573DE /* FoodPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerTests.swift; sourceTree = "<group>"; };
 		5C54B12E2ACECF4B00DD1FC9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 		5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
@@ -62,6 +75,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5C1FCD5C2ACEB0DE00FD6215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C4B1B362AD5610600C573DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,6 +96,7 @@
 			children = (
 				5C4B1B2C2AD4E88F00C573DE /* MyPlayground.playground */,
 				5C1FCD612ACEB0DE00FD6215 /* FoodPicker */,
+				5C4B1B3A2AD5610600C573DE /* FoodPickerTests */,
 				5C1FCD602ACEB0DE00FD6215 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5C1FCD5F2ACEB0DE00FD6215 /* FoodPicker.app */,
+				5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,10 +214,18 @@
 			isa = PBXGroup;
 			children = (
 				5C4B1B182AD4395B00C573DE /* SFSymbol.swift */,
-				5C4B1B2D2AD5044900C573DE /* Unit.swift */,
+				5C4B1B2D2AD5044900C573DE /* MyWeightUnit.swift */,
 				5C4B1B2F2AD5049300C573DE /* UserDefaultsKey.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		5C4B1B3A2AD5610600C573DE /* FoodPickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C4B1B3B2AD5610600C573DE /* FoodPickerTests.swift */,
+			);
+			path = FoodPickerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +248,24 @@
 			productReference = 5C1FCD5F2ACEB0DE00FD6215 /* FoodPicker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C4B1B382AD5610600C573DE /* FoodPickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C4B1B3F2AD5610600C573DE /* Build configuration list for PBXNativeTarget "FoodPickerTests" */;
+			buildPhases = (
+				5C4B1B352AD5610600C573DE /* Sources */,
+				5C4B1B362AD5610600C573DE /* Frameworks */,
+				5C4B1B372AD5610600C573DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C4B1B3E2AD5610600C573DE /* PBXTargetDependency */,
+			);
+			name = FoodPickerTests;
+			productName = FoodPickerTests;
+			productReference = 5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +278,10 @@
 				TargetAttributes = {
 					5C1FCD5E2ACEB0DE00FD6215 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					5C4B1B382AD5610600C573DE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5C1FCD5E2ACEB0DE00FD6215;
 					};
 				};
 			};
@@ -247,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				5C1FCD5E2ACEB0DE00FD6215 /* FoodPicker */,
+				5C4B1B382AD5610600C573DE /* FoodPickerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +314,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C4B1B372AD5610600C573DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,7 +331,7 @@
 				5C4B1B2B2AD4872B00C573DE /* SettingScreen.swift in Sources */,
 				5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */,
 				5C4B1B242AD4655000C573DE /* AnyTransition+.swift in Sources */,
-				5C4B1B2E2AD5044900C573DE /* Unit.swift in Sources */,
+				5C4B1B2E2AD5044900C573DE /* MyWeightUnit.swift in Sources */,
 				5C4B1B142AD4370D00C573DE /* FoodDetailSheet.swift in Sources */,
 				5C4B1B052AD246A500C573DE /* FoodForm.swift in Sources */,
 				5C4B1B292AD4778700C573DE /* HomeScreen.swift in Sources */,
@@ -292,7 +352,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C4B1B352AD5610600C573DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C4B1B3C2AD5610600C573DE /* FoodPickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C4B1B3E2AD5610600C573DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1FCD5E2ACEB0DE00FD6215 /* FoodPicker */;
+			targetProxy = 5C4B1B3D2AD5610600C573DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5C1FCD6B2ACEB0DF00FD6215 /* Debug */ = {
@@ -474,6 +550,50 @@
 			};
 			name = Release;
 		};
+		5C4B1B402AD5610600C573DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.FoodPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoodPicker";
+			};
+			name = Debug;
+		};
+		5C4B1B412AD5610600C573DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.FoodPickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoodPicker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +611,15 @@
 			buildConfigurations = (
 				5C1FCD6E2ACEB0DF00FD6215 /* Debug */,
 				5C1FCD6F2ACEB0DF00FD6215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C4B1B3F2AD5610600C573DE /* Build configuration list for PBXNativeTarget "FoodPickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C4B1B402AD5610600C573DE /* Debug */,
+				5C4B1B412AD5610600C573DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

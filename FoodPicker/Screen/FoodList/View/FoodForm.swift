@@ -120,6 +120,7 @@ extension FoodListScreen {
             field = .init(rawValue: rawValue + 1)
         }
         
+        // TODO: 单位修改
         private func buildNumberField(title: String, value: Binding<Double>, suffix: String = "g",field: FocusState<MyField?>.Binding,equals: MyField) -> some View {
             LabeledContent(title) {
                 HStack {

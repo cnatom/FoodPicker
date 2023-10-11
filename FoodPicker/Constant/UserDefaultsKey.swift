@@ -13,5 +13,7 @@ extension UserDefaults {
         case unit
         case startTab
         case foodList
+        case perferredEnergyUnit
+        case perferredWeightUnit
     }
 }

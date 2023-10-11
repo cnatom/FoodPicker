@@ -33,10 +33,11 @@ extension FoodListScreen {
                     .minimumScaleFactor(shouldVStack ? 1 : 0.2)
                 
                 VStack(spacing: 10) {
-                    buildNutritionView(title: "热量", value: food.$calorie)
-                    buildNutritionView(title: "蛋白质", value: food.$protein)
-                    buildNutritionView(title: "脂肪", value: food.$fat)
-                    buildNutritionView(title: "碳水", value: food.$carb)
+                    // TODO: 单位修改
+                    buildNutritionView(title: "热量", value: food.$calorie.description)
+                    buildNutritionView(title: "蛋白质", value: food.$protein.description)
+                    buildNutritionView(title: "脂肪", value: food.$fat.description)
+                    buildNutritionView(title: "碳水", value: food.$carb.description)
                 }
             }
             .padding()

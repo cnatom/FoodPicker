@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingScreen: View {
     @AppStorage(.shouldUseDarkMode) private var shouldUseDarkMode: Bool = false
-    @AppStorage(.unit) private var unit: Unit = .gram
+    @AppStorage(.unit) private var unit: MyWeightUnit = .gram
     @AppStorage(.startTab) private var startTab: HomeScreen.Tab = .picker
     @State private var confirmationDialog: Dialog = .inactive
 
@@ -28,7 +28,7 @@ struct SettingScreen: View {
                 }
 
                 Picker(selection: $unit) {
-                    ForEach(Unit.allCases) { $0.tag($0) }
+                    ForEach(MyWeightUnit.allCases) { $0.tag($0) }
                 } label: {
                     Label("单位", systemImage: .unitSign)
                 }

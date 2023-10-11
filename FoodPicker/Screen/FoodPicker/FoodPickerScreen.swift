@@ -77,7 +77,7 @@ private extension FoodPickerScreen {
                 }
                 .buttonStyle(.plain)
             }
-            Text("热量 \(selectedFood.$calorie)")
+            Text("热量 \(selectedFood.$calorie.description)")
 
             selectedFoodDetailInfoView
         }
@@ -89,21 +89,21 @@ private extension FoodPickerScreen {
                 HStack {
                     VStack(spacing: 12) {
                         Text("蛋白质")
-                        Text(selectedFood!.$protein)
+                        Text(selectedFood!.$protein.description)
                     }
                     
                     Divider().frame(width: 1, height: 30).padding(.horizontal)
                     
                     VStack(spacing: 12) {
                         Text("脂肪")
-                        Text(selectedFood!.$fat)
+                        Text(selectedFood!.$fat.description)
                     }
                     
                     Divider().frame(width: 1, height: 30).padding(.horizontal)
                     
                     VStack(spacing: 12) {
                         Text("碳水")
-                        Text(selectedFood!.$carb)
+                        Text(selectedFood!.$carb.description)
                         
                     }
                 }

@@ -6,23 +6,23 @@
 //
 
 // NOTE: 自定义propertyWrapper
-@propertyWrapper struct Suffix: Equatable{
+@propertyWrapper struct Suffix<Unit: MyUnitProtocol & Equatable>: Equatable {
     var wrappedValue: Double
-    private let suffix: String
-    
-    init(wrappedValue: Double,_ suffix: String) {
+    private let unit: Unit
+
+    init(wrappedValue: Double, _ unit: Unit) {
         self.wrappedValue = wrappedValue
-        self.suffix = suffix
+        self.unit = unit
     }
-    
-    var projectedValue: String{
-        String(format: "%.1f \(suffix)", wrappedValue)
+
+    var projectedValue: Self {
+        self
     }
-    
+
+    var description: String {
+        wrappedValue.formatted(.number.precision(.fractionLength(0 ... 1))) + " \(unit.rawValue)"
+    }
 }
 
 // NOTE: 因为Food需要Codable，所以Food中的wrapper @Suffix 也需要是Codable的
-extension Suffix: Codable{
-    
-}
-
+extension Suffix: Codable {}
