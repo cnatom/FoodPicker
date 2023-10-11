@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+
 protocol MyUnitProtocol: Codable,CaseIterable,Identifiable,View,RawRepresentable where RawValue == String{
     
 }
 
+// NOTE: 通过extension为protocol添加默认实现
 extension MyUnitProtocol{
     var body: some View {
         Text(self.rawValue)

@@ -6,6 +6,7 @@
 //
 
 // NOTE: 自定义propertyWrapper
+// NOTE: propertyWrapper泛型
 @propertyWrapper struct Suffix<Unit: MyUnitProtocol & Equatable>: Equatable {
     var wrappedValue: Double
     private let unit: Unit

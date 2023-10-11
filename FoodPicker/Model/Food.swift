@@ -25,13 +25,13 @@ struct Food: Equatable, Identifiable {
 // MARK: statics
 
 extension Food {
-    private init(name: String, image: String, calorie: Double, carb: Double, fat: Double, protein: Double,energyUnit: MyEnergyUnit = .cal, weightUnit: MyWeightUnit = .gram) {
+    private init(name: String, image: String, calorie: Double, carb: Double, fat: Double, protein: Double) {
         self.name = name
         self.image = image
-        _calorie = .init(wrappedValue: calorie, energyUnit)
-        _carb = .init(wrappedValue: carb, weightUnit)
-        _fat = .init(wrappedValue: fat, weightUnit)
-        _protein = .init(wrappedValue: protein, weightUnit)
+        _calorie = .init(wrappedValue: calorie, .cal)
+        _carb = .init(wrappedValue: carb,.gram)
+        _fat = .init(wrappedValue: fat, .gram)
+        _protein = .init(wrappedValue: protein, .gram)
     }
 
     static let examples = [
@@ -47,9 +47,11 @@ extension Food {
     ]
 
     static var new: Food {
+        // 读取存储在本地的单位信息
         @AppStorage(.perferredEnergyUnit) var energyUnit: MyEnergyUnit = .cal
         @AppStorage(.perferredWeightUnit) var weightUnit: MyWeightUnit = .gram
-        return Food(name: "", image: "", calorie: 0.0, carb: 0.0, fat: 0.0, protein: 0.0,energyUnit: energyUnit,weightUnit: weightUnit)
+        
+        return Food(name: "", image: "", calorie: .init(wrappedValue: 0.0, .cal), carb: .init(wrappedValue: 0.0, .gram), fat: .init(wrappedValue: 0.0, .gram), protein: .init(wrappedValue: 0.0, .gram))
     }
 }
 

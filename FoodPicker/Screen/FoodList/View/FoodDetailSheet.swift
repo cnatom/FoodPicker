@@ -21,6 +21,8 @@ extension FoodListScreen {
         
         @State private var foodDetailHeight: CGFloat = FoodDetailSheetHeightKey.defaultValue
         
+        
+        
         var food: Food
         
         var body: some View {
@@ -33,7 +35,6 @@ extension FoodListScreen {
                     .minimumScaleFactor(shouldVStack ? 1 : 0.2)
                 
                 VStack(spacing: 10) {
-                    // TODO: 单位修改
                     buildNutritionView(title: "热量", value: food.$calorie.description)
                     buildNutritionView(title: "蛋白质", value: food.$protein.description)
                     buildNutritionView(title: "脂肪", value: food.$fat.description)
