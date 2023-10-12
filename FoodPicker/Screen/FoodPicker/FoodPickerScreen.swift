@@ -87,25 +87,18 @@ private extension FoodPickerScreen {
         VStack {
             if shouldShowInfo {
                 HStack {
-                    VStack(spacing: 12) {
-                        Text("蛋白质")
-                        Text(selectedFood!.$protein.description)
-                    }
+                 
+                    buildElementColumn(title: "蛋白质", subTitle: selectedFood!.$protein.description)
                     
                     Divider().frame(width: 1, height: 30).padding(.horizontal)
                     
-                    VStack(spacing: 12) {
-                        Text("脂肪")
-                        Text(selectedFood!.$fat.description)
-                    }
+                    buildElementColumn(title: "脂肪", subTitle: selectedFood!.$fat.description)
+
                     
                     Divider().frame(width: 1, height: 30).padding(.horizontal)
                     
-                    VStack(spacing: 12) {
-                        Text("碳水")
-                        Text(selectedFood!.$carb.description)
-                        
-                    }
+                    buildElementColumn(title: "碳水", subTitle: selectedFood!.$carb.description)
+
                 }
                 .font(.title2)
                 .padding()
@@ -115,6 +108,15 @@ private extension FoodPickerScreen {
         }
         .maxWidth()
         .clipped() // 动画开始时防止与上方view重叠
+    }
+    
+    func buildElementColumn(title: String,subTitle: String) -> some View{
+        VStack(spacing: 12) {
+            Text(title)
+            Text(subTitle)
+                .lineLimit(1)
+        }
+        .minimumScaleFactor(0.3)
     }
 
     var selectFoodButton: some View {

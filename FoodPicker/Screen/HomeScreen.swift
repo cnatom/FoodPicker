@@ -9,8 +9,12 @@ import SwiftUI
 
 extension HomeScreen {
     // NOTE: enum的Tab
-    enum Tab: String, View, CaseIterable {
+    enum Tab: String, View, CaseIterable, Identifiable{
+        var id: Self { self}
+        
         case picker, list, settings
+        
+        
 
         var body: some View {
             content.tabItem { tabLabel }
@@ -51,7 +55,7 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             TabView(selection: $tab) {
-                ForEach(Tab.allCases, id: \.self) {
+                ForEach(Tab.allCases) {
                     $0
                 }
             }
