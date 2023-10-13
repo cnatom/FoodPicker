@@ -32,6 +32,10 @@
 		5C54B1332ACEEBA600DD1FC9 /* SuffixWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */; };
 		5C54B1352ACEF7CE00DD1FC9 /* FoodListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */; };
 		5C6290092AD6E21C00126370 /* MyUnitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6290082AD6E21C00126370 /* MyUnitProtocol.swift */; };
+		5C6290112AD9363B00126370 /* AsyncImageDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6290102AD9363B00126370 /* AsyncImageDemoApp.swift */; };
+		5C6290132AD9363B00126370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6290122AD9363B00126370 /* ContentView.swift */; };
+		5C6290152AD9363C00126370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6290142AD9363C00126370 /* Assets.xcassets */; };
+		5C6290182AD9363C00126370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6290172AD9363C00126370 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,11 @@
 		5C54B1322ACEEBA600DD1FC9 /* SuffixWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixWrapper.swift; sourceTree = "<group>"; };
 		5C54B1342ACEF7CE00DD1FC9 /* FoodListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListScreen.swift; sourceTree = "<group>"; };
 		5C6290082AD6E21C00126370 /* MyUnitProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUnitProtocol.swift; sourceTree = "<group>"; };
+		5C62900E2AD9363B00126370 /* AsyncImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsyncImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6290102AD9363B00126370 /* AsyncImageDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDemoApp.swift; sourceTree = "<group>"; };
+		5C6290122AD9363B00126370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5C6290142AD9363C00126370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C6290172AD9363C00126370 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C62900B2AD9363B00126370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +115,7 @@
 				5C4B1B2C2AD4E88F00C573DE /* MyPlayground.playground */,
 				5C1FCD612ACEB0DE00FD6215 /* FoodPicker */,
 				5C4B1B3A2AD5610600C573DE /* FoodPickerTests */,
+				5C62900F2AD9363B00126370 /* AsyncImageDemo */,
 				5C1FCD602ACEB0DE00FD6215 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +125,7 @@
 			children = (
 				5C1FCD5F2ACEB0DE00FD6215 /* FoodPicker.app */,
 				5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */,
+				5C62900E2AD9363B00126370 /* AsyncImageDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,6 +249,25 @@
 			path = FoodPickerTests;
 			sourceTree = "<group>";
 		};
+		5C62900F2AD9363B00126370 /* AsyncImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5C6290102AD9363B00126370 /* AsyncImageDemoApp.swift */,
+				5C6290122AD9363B00126370 /* ContentView.swift */,
+				5C6290142AD9363C00126370 /* Assets.xcassets */,
+				5C6290162AD9363C00126370 /* Preview Content */,
+			);
+			path = AsyncImageDemo;
+			sourceTree = "<group>";
+		};
+		5C6290162AD9363C00126370 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5C6290172AD9363C00126370 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +306,23 @@
 			productReference = 5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5C62900D2AD9363B00126370 /* AsyncImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C62901B2AD9363C00126370 /* Build configuration list for PBXNativeTarget "AsyncImageDemo" */;
+			buildPhases = (
+				5C62900A2AD9363B00126370 /* Sources */,
+				5C62900B2AD9363B00126370 /* Frameworks */,
+				5C62900C2AD9363B00126370 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncImageDemo;
+			productName = AsyncImageDemo;
+			productReference = 5C62900E2AD9363B00126370 /* AsyncImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,6 +339,9 @@
 					5C4B1B382AD5610600C573DE = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 5C1FCD5E2ACEB0DE00FD6215;
+					};
+					5C62900D2AD9363B00126370 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -303,6 +360,7 @@
 			targets = (
 				5C1FCD5E2ACEB0DE00FD6215 /* FoodPicker */,
 				5C4B1B382AD5610600C573DE /* FoodPickerTests */,
+				5C62900D2AD9363B00126370 /* AsyncImageDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C62900C2AD9363B00126370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C6290182AD9363C00126370 /* Preview Assets.xcassets in Resources */,
+				5C6290152AD9363C00126370 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +428,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C4B1B3C2AD5610600C573DE /* FoodPickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C62900A2AD9363B00126370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C6290132AD9363B00126370 /* ContentView.swift in Sources */,
+				5C6290112AD9363B00126370 /* AsyncImageDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +674,66 @@
 			};
 			name = Release;
 		};
+		5C6290192AD9363C00126370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AsyncImageDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.AsyncImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C62901A2AD9363C00126370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AsyncImageDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.AsyncImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -624,6 +760,15 @@
 			buildConfigurations = (
 				5C4B1B402AD5610600C573DE /* Debug */,
 				5C4B1B412AD5610600C573DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C62901B2AD9363C00126370 /* Build configuration list for PBXNativeTarget "AsyncImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C6290192AD9363C00126370 /* Debug */,
+				5C62901A2AD9363C00126370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

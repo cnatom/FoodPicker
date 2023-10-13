@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C1FCD5E2ACEB0DE00FD6215"
-               BuildableName = "FoodPicker.app"
-               BlueprintName = "FoodPicker"
+               BlueprintIdentifier = "5C62900D2AD9363B00126370"
+               BuildableName = "AsyncImageDemo.app"
+               BlueprintName = "AsyncImageDemo"
                ReferencedContainer = "container:FoodPicker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C4B1B382AD5610600C573DE"
-               BuildableName = "FoodPickerTests.xctest"
-               BlueprintName = "FoodPickerTests"
-               ReferencedContainer = "container:FoodPicker.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "zh-Hant"
-      region = "CN"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -58,9 +43,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C1FCD5E2ACEB0DE00FD6215"
-            BuildableName = "FoodPicker.app"
-            BlueprintName = "FoodPicker"
+            BlueprintIdentifier = "5C62900D2AD9363B00126370"
+            BuildableName = "AsyncImageDemo.app"
+            BlueprintName = "AsyncImageDemo"
             ReferencedContainer = "container:FoodPicker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,9 +60,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C1FCD5E2ACEB0DE00FD6215"
-            BuildableName = "FoodPicker.app"
-            BlueprintName = "FoodPicker"
+            BlueprintIdentifier = "5C62900D2AD9363B00126370"
+            BuildableName = "AsyncImageDemo.app"
+            BlueprintName = "AsyncImageDemo"
             ReferencedContainer = "container:FoodPicker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

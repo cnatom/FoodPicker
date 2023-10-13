@@ -43,6 +43,7 @@ extension HomeScreen {
 }
 
 struct HomeScreen: View {
+    @Environment(\.colorScheme) var colorScheme
     @AppStorage(.shouldUseDarkMode) var shouldUseDarkMode = false
     @State var tab: Tab = {
         // NOTE: 手动读取UserDefaults中的本地数据

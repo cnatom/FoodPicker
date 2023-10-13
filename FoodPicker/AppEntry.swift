@@ -10,9 +10,21 @@ import SwiftUI
 
 @main
 struct AppEntry: App {
+    
+    func initTabBarAppearance (){
+        let appearance = UITabBarAppearance()
+        appearance.configureWithTransparentBackground() // <- HERE
+        
+        
+//        UITabBar.appearance().standardAppearance = appearance
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeScreen()
+                .onAppear{
+                    initTabBarAppearance()
+                }
         }
     }
 }
