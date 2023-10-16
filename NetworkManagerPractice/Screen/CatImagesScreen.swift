@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct CatImageScreen: View {
+    
+    @Environment(\.apiManager) var apiManager: CatAPIManager
+    
     @Binding var favorites: [CatImageViewModel]
     
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false
     
+
     var body: some View {
         VStack {
             HStack {
@@ -45,9 +49,12 @@ struct CatImageScreen: View {
 
 private extension CatImageScreen {
     func loadRandomImages() async {
-        // TODO: fetch new images
-        try! await Task.sleep(for: .seconds(1))
-        catImages = .stub.shuffled()
+        /// FIXME: error handling
+        do{
+            catImages = try await apiManager.getImages().map{CatImageViewModel($0)}
+        }catch{
+            print("\(error)")
+        }
     }
     
     func toggleFavorite(_ cat: CatImageViewModel) {
@@ -82,5 +89,6 @@ struct CatImageScreen_Previews: PreviewProvider, View {
     
     static var previews: some View {
         Self()
+            .environment(\.apiManager, .stub)
     }
 }
