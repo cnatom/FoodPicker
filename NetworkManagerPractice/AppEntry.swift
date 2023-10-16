@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: helll
 @main
 struct AppEntry: App {
     init(){

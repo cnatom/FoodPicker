@@ -49,6 +49,9 @@
 		5C64561F2ADA90A2006CDBD4 /* CatImagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C64561C2ADA90A2006CDBD4 /* CatImagesScreen.swift */; };
 		5C6456232ADA90AA006CDBD4 /* CatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6456212ADA90AA006CDBD4 /* CatImageView.swift */; };
 		5C6456242ADA90AA006CDBD4 /* CatImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6456222ADA90AA006CDBD4 /* CatImageViewModel.swift */; };
+		5C9A83952ADD0B4100F2DCAC /* CatAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A83942ADD0B4100F2DCAC /* CatAPIManager.swift */; };
+		5C9A839D2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A839C2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift */; };
+		5C9A83A52ADD215900F2DCAC /* CatAPIManager+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5C1FCD5E2ACEB0DE00FD6215;
 			remoteInfo = FoodPicker;
+		};
+		5C9A839E2ADD140200F2DCAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C1FCD572ACEB0DE00FD6215 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C6455FF2ADA9078006CDBD4;
+			remoteInfo = NetworkManagerPractice;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -109,6 +119,10 @@
 		5C64561C2ADA90A2006CDBD4 /* CatImagesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImagesScreen.swift; sourceTree = "<group>"; };
 		5C6456212ADA90AA006CDBD4 /* CatImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageView.swift; sourceTree = "<group>"; };
 		5C6456222ADA90AA006CDBD4 /* CatImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageViewModel.swift; sourceTree = "<group>"; };
+		5C9A83942ADD0B4100F2DCAC /* CatAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIManager.swift; sourceTree = "<group>"; };
+		5C9A839A2ADD140200F2DCAC /* NetworkManagerPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C9A839C2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerPracticeTests.swift; sourceTree = "<group>"; };
+		5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Env.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +154,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C9A83972ADD140200F2DCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -151,6 +172,7 @@
 				5C4B1B3A2AD5610600C573DE /* FoodPickerTests */,
 				5C62900F2AD9363B00126370 /* AsyncImageDemo */,
 				5C6456012ADA9078006CDBD4 /* NetworkManagerPractice */,
+				5C9A839B2ADD140200F2DCAC /* NetworkManagerPracticeTests */,
 				5C1FCD602ACEB0DE00FD6215 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +184,7 @@
 				5C4B1B392AD5610600C573DE /* FoodPickerTests.xctest */,
 				5C62900E2AD9363B00126370 /* AsyncImageDemo.app */,
 				5C6456002ADA9078006CDBD4 /* NetworkManagerPractice.app */,
+				5C9A839A2ADD140200F2DCAC /* NetworkManagerPracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +335,7 @@
 				5C6456192ADA90A2006CDBD4 /* Screen */,
 				5C64560E2ADA9089006CDBD4 /* Extension */,
 				5C6456062ADA907A006CDBD4 /* Assets.xcassets */,
+				5C9A83A32ADD212500F2DCAC /* CatAPIManager */,
 				5C6456082ADA907A006CDBD4 /* Preview Content */,
 			);
 			path = NetworkManagerPractice;
@@ -354,6 +378,23 @@
 				5C6456222ADA90AA006CDBD4 /* CatImageViewModel.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5C9A839B2ADD140200F2DCAC /* NetworkManagerPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C9A839C2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift */,
+			);
+			path = NetworkManagerPracticeTests;
+			sourceTree = "<group>";
+		};
+		5C9A83A32ADD212500F2DCAC /* CatAPIManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C9A83942ADD0B4100F2DCAC /* CatAPIManager.swift */,
+				5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */,
+			);
+			path = CatAPIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +469,24 @@
 			productReference = 5C6456002ADA9078006CDBD4 /* NetworkManagerPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C9A83992ADD140200F2DCAC /* NetworkManagerPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C9A83A02ADD140200F2DCAC /* Build configuration list for PBXNativeTarget "NetworkManagerPracticeTests" */;
+			buildPhases = (
+				5C9A83962ADD140200F2DCAC /* Sources */,
+				5C9A83972ADD140200F2DCAC /* Frameworks */,
+				5C9A83982ADD140200F2DCAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C9A839F2ADD140200F2DCAC /* PBXTargetDependency */,
+			);
+			name = NetworkManagerPracticeTests;
+			productName = NetworkManagerPracticeTests;
+			productReference = 5C9A839A2ADD140200F2DCAC /* NetworkManagerPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -451,6 +510,10 @@
 					5C6455FF2ADA9078006CDBD4 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					5C9A83992ADD140200F2DCAC = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5C6455FF2ADA9078006CDBD4;
+					};
 				};
 			};
 			buildConfigurationList = 5C1FCD5A2ACEB0DE00FD6215 /* Build configuration list for PBXProject "FoodPicker" */;
@@ -470,6 +533,7 @@
 				5C4B1B382AD5610600C573DE /* FoodPickerTests */,
 				5C62900D2AD9363B00126370 /* AsyncImageDemo */,
 				5C6455FF2ADA9078006CDBD4 /* NetworkManagerPractice */,
+				5C9A83992ADD140200F2DCAC /* NetworkManagerPracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -506,6 +570,13 @@
 			files = (
 				5C64560A2ADA907A006CDBD4 /* Preview Assets.xcassets in Resources */,
 				5C6456072ADA907A006CDBD4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C9A83982ADD140200F2DCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +636,8 @@
 				5C6456162ADA9089006CDBD4 /* URL+.swift in Sources */,
 				5C6456152ADA9089006CDBD4 /* URLCache+.swift in Sources */,
 				5C6456182ADA9089006CDBD4 /* Operator+.swift in Sources */,
+				5C9A83952ADD0B4100F2DCAC /* CatAPIManager.swift in Sources */,
+				5C9A83A52ADD215900F2DCAC /* CatAPIManager+Env.swift in Sources */,
 				5C6456232ADA90AA006CDBD4 /* CatImageView.swift in Sources */,
 				5C6456172ADA9089006CDBD4 /* URLSession+.swift in Sources */,
 				5C6456242ADA90AA006CDBD4 /* CatImageViewModel.swift in Sources */,
@@ -576,6 +649,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C9A83962ADD140200F2DCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C9A839D2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -583,6 +664,11 @@
 			isa = PBXTargetDependency;
 			target = 5C1FCD5E2ACEB0DE00FD6215 /* FoodPicker */;
 			targetProxy = 5C4B1B3D2AD5610600C573DE /* PBXContainerItemProxy */;
+		};
+		5C9A839F2ADD140200F2DCAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C6455FF2ADA9078006CDBD4 /* NetworkManagerPractice */;
+			targetProxy = 5C9A839E2ADD140200F2DCAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -930,6 +1016,50 @@
 			};
 			name = Release;
 		};
+		5C9A83A12ADD140200F2DCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.NetworkManagerPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkManagerPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkManagerPractice";
+			};
+			name = Debug;
+		};
+		5C9A83A22ADD140200F2DCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95VT929YHJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atcumt.NetworkManagerPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkManagerPractice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NetworkManagerPractice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -974,6 +1104,15 @@
 			buildConfigurations = (
 				5C64560B2ADA907A006CDBD4 /* Debug */,
 				5C64560C2ADA907A006CDBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C9A83A02ADD140200F2DCAC /* Build configuration list for PBXNativeTarget "NetworkManagerPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C9A83A12ADD140200F2DCAC /* Debug */,
+				5C9A83A22ADD140200F2DCAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

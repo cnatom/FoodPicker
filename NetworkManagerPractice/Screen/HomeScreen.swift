@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeScreen: View {
     @State private var tab: Tab = .images
     @State private var favoriteImages: [CatImageViewModel] = []
-    
+
     var body: some View {
         TabView(selection: $tab) {
             CatImageScreen(favorites: $favoriteImages)
@@ -47,5 +47,6 @@ private extension HomeScreen {
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
+            .environment(\.apiManager, .stub)
     }
 }
