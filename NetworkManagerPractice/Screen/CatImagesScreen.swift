@@ -11,7 +11,7 @@ struct CatImageScreen: View {
     
     @Environment(\.apiManager) var apiManager: CatAPIManager
     
-    @Binding var favorites: [CatImageViewModel]
+    @Binding var favorites: [FavoriteItem]
     
     @State private var catImages: [CatImageViewModel] = []
     @State private var didFirstLoad: Bool = false
@@ -20,20 +20,24 @@ struct CatImageScreen: View {
     var body: some View {
         VStack {
             HStack {
-                Text("可愛貓咪")
+                Text("猫咪图鉴")
                     .font(.largeTitle.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Button("換一批") { Task { await loadRandomImages() } }
+                /// FIXME: 不该等网络请求结束之后才有动画
+                Button("换一批") { Task { await loadRandomImages() } }
                     .buttonStyle(.bordered)
                     .font(.headline)
             }.padding(.horizontal)
             
             ScrollView {
                 ForEach(catImages) { catImage in
-                    let isFavourited = favorites.contains(where: \.id == catImage.id)
+                    let isFavourited = favorites.contains(where: \.imageID == catImage.id)
                     CatImageView(catImage, isFavourited: isFavourited) {
-                        toggleFavorite(catImage)
+                        Task{
+                            /// FIXME: error handling & pass async closure
+                            try! await toggleFavorite(catImage)
+                        }
                     }
                 }
             }
@@ -57,31 +61,31 @@ private extension CatImageScreen {
         }
     }
     
-    func toggleFavorite(_ cat: CatImageViewModel) {
-        guard let index = favorites.firstIndex(where: \.id == cat.id)  else {
-            add(cat)
+    func toggleFavorite(_ cat: CatImageViewModel)async throws{
+        guard let index = favorites.firstIndex(where: \.imageID == cat.id)  else {
+            try await favorites.add(cat, apiManager: apiManager)
             return
         }
-        remove(index: index)
+        try await favorites.remove(at: index,apiManager: apiManager)
     }
 }
 
 
-private extension CatImageScreen {
-    func add(_ cat: CatImageViewModel) {
-        favorites.append(cat)
-        // TODO: send update to the server
+extension [FavoriteItem] {
+    mutating func add(_ cat: CatImageViewModel,apiManager: CatAPIManager)async throws {
+        let id = try await apiManager.addToFavorite(imageID: cat.id)
+        self.append(.init(catImage: cat, id: id))
     }
     
-    func remove(index: Int) {
-        favorites.remove(at: index)
-        // TODO:  send update to the server
+    mutating func remove(at index: Int,apiManager: CatAPIManager)async throws {
+        try await apiManager.removeFromfavorite(id: self[index].id)
+        self.remove(at: index)
     }
 }
 
 
 struct CatImageScreen_Previews: PreviewProvider, View {
-    @State private var favorites: [CatImageViewModel] = []
+    @State private var favorites: [FavoriteItem] = []
     
     var body: some View {
         CatImageScreen(favorites: $favorites)

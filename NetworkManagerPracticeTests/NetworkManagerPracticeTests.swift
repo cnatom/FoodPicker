@@ -17,5 +17,10 @@ final class NetworkManagerPracticeTests: XCTestCase {
         let images = try await sut.getImages()
         XCTAssertEqual(images.count, 10)
     }
+    
+    func testAddFavorite()async throws{
+//        let id = try await sut.addToFavorite(imageID: "9ccXTANkb")
+//        XCTAssertEqual(100038507, id)
+    }
 
 }

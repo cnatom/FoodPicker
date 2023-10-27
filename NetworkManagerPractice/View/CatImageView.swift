@@ -58,12 +58,15 @@ struct CatImageView: View {
                                 .padding()
                                 .foregroundStyle(.pink)
                         }
+                        /// FIXME: 不该等网络呼叫结束才有动画
                         .onTapGesture(count: 2, perform: onDoubleTap)
                     
                 case .failure:
                     Color(.systemGray6)
                         .overlay {
-                            Text("圖片無法顯示")
+                            Button("重新加载"){
+                                phase = .empty
+                            }
                         }
                     
                     

@@ -25,7 +25,10 @@ extension URLSession{
     func data(for urlRequest: URLRequest)async throws -> Data{
         let (data,response) = try await self.data(for: urlRequest)
         guard let response = response as? HTTPURLResponse else {throw APIError.invalidURL}
-        guard 200...299 ~= response.statusCode else {throw APIError.invalidCode(response.statusCode)}
+        guard 200...299 ~= response.statusCode else {
+            assertionFailure(String(data: data, encoding: .utf8) ?? "")
+            throw APIError.invalidCode(response.statusCode)
+        }
         return data
     }
 }

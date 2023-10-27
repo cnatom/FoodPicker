@@ -18,6 +18,10 @@ extension CatImageViewModel{
     init(_ image: CatAPIManager.ImageResponse) {
         self.init(id: image.id, url: image.url, width: image.width, height: image.height)
     }
+    
+    init(favoriteItem: FavoriteItem){
+        self.init(id: favoriteItem.imageID, url: favoriteItem.imageURL, width: nil, height: nil)
+    }
 }
 
 extension CatImageViewModel: Equatable { }

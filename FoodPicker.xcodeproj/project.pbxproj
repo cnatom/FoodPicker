@@ -52,6 +52,9 @@
 		5C9A83952ADD0B4100F2DCAC /* CatAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A83942ADD0B4100F2DCAC /* CatAPIManager.swift */; };
 		5C9A839D2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A839C2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift */; };
 		5C9A83A52ADD215900F2DCAC /* CatAPIManager+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */; };
+		5CAA99D82ADE5E8200F14D94 /* MySecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA99D72ADE5E8200F14D94 /* MySecret.swift */; };
+		5CAA99DB2ADE607B00F14D94 /* CatAPIManager+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAA99DA2ADE607B00F14D94 /* CatAPIManager+Stub.swift */; };
+		5CCBD6A12AEB9D0F00E507B1 /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCBD6A02AEB9D0F00E507B1 /* FavoriteItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,9 @@
 		5C9A839A2ADD140200F2DCAC /* NetworkManagerPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9A839C2ADD140200F2DCAC /* NetworkManagerPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerPracticeTests.swift; sourceTree = "<group>"; };
 		5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Env.swift"; sourceTree = "<group>"; };
+		5CAA99D72ADE5E8200F14D94 /* MySecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecret.swift; sourceTree = "<group>"; };
+		5CAA99DA2ADE607B00F14D94 /* CatAPIManager+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatAPIManager+Stub.swift"; sourceTree = "<group>"; };
+		5CCBD6A02AEB9D0F00E507B1 /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,12 +337,14 @@
 			isa = PBXGroup;
 			children = (
 				5C6456022ADA9078006CDBD4 /* AppEntry.swift */,
+				5CCBD69F2AEB9CFC00E507B1 /* Model */,
 				5C6456202ADA90AA006CDBD4 /* View */,
 				5C6456192ADA90A2006CDBD4 /* Screen */,
 				5C64560E2ADA9089006CDBD4 /* Extension */,
 				5C6456062ADA907A006CDBD4 /* Assets.xcassets */,
 				5C9A83A32ADD212500F2DCAC /* CatAPIManager */,
 				5C6456082ADA907A006CDBD4 /* Preview Content */,
+				5CAA99D72ADE5E8200F14D94 /* MySecret.swift */,
 			);
 			path = NetworkManagerPractice;
 			sourceTree = "<group>";
@@ -364,9 +372,9 @@
 		5C6456192ADA90A2006CDBD4 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5C64561A2ADA90A2006CDBD4 /* FavoriteScreen.swift */,
 				5C64561B2ADA90A2006CDBD4 /* HomeScreen.swift */,
 				5C64561C2ADA90A2006CDBD4 /* CatImagesScreen.swift */,
+				5C64561A2ADA90A2006CDBD4 /* FavoriteScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -393,8 +401,17 @@
 			children = (
 				5C9A83942ADD0B4100F2DCAC /* CatAPIManager.swift */,
 				5C9A83A42ADD215900F2DCAC /* CatAPIManager+Env.swift */,
+				5CAA99DA2ADE607B00F14D94 /* CatAPIManager+Stub.swift */,
 			);
 			path = CatAPIManager;
+			sourceTree = "<group>";
+		};
+		5CCBD69F2AEB9CFC00E507B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CCBD6A02AEB9D0F00E507B1 /* FavoriteItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,9 +658,12 @@
 				5C6456232ADA90AA006CDBD4 /* CatImageView.swift in Sources */,
 				5C6456172ADA9089006CDBD4 /* URLSession+.swift in Sources */,
 				5C6456242ADA90AA006CDBD4 /* CatImageViewModel.swift in Sources */,
+				5CAA99DB2ADE607B00F14D94 /* CatAPIManager+Stub.swift in Sources */,
 				5C64561E2ADA90A2006CDBD4 /* HomeScreen.swift in Sources */,
 				5C6456032ADA9078006CDBD4 /* AppEntry.swift in Sources */,
 				5C6456142ADA9089006CDBD4 /* Decoding+.swift in Sources */,
+				5CCBD6A12AEB9D0F00E507B1 /* FavoriteItem.swift in Sources */,
+				5CAA99D82ADE5E8200F14D94 /* MySecret.swift in Sources */,
 				5C64561F2ADA90A2006CDBD4 /* CatImagesScreen.swift in Sources */,
 				5C64561D2ADA90A2006CDBD4 /* FavoriteScreen.swift in Sources */,
 			);

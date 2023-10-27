@@ -9,8 +9,9 @@ import SwiftUI
 
 // FIXME: Better implementation for handling favorites.
 struct HomeScreen: View {
+    @Environment(\.apiManager) private var apiManager
     @State private var tab: Tab = .images
-    @State private var favoriteImages: [CatImageViewModel] = []
+    @State private var favoriteImages: [FavoriteItem] = []
 
     var body: some View {
         TabView(selection: $tab) {
@@ -32,7 +33,7 @@ struct HomeScreen: View {
 
 private extension HomeScreen {
     func loadFavorites() async throws {
-        // TODO: fetch favorite
+        self.favoriteImages = try await apiManager.getFavorite()
     }
 }
 
@@ -47,6 +48,6 @@ private extension HomeScreen {
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
-            .environment(\.apiManager, .stub)
+//            .environment(\.apiManager, .stub)
     }
 }
