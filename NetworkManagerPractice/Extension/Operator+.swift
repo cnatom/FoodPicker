@@ -7,6 +7,6 @@
 
 import Foundation
 
-func ==<T, Value: Equatable>(keyPath: KeyPath<T, Value>, value: Value) -> (T) -> Bool {
+func == <T, Value: Equatable>(keyPath: KeyPath<T, Value>, value: Value) -> (T) -> Bool {
     { $0[keyPath: keyPath] == value }
 }

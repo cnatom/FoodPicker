@@ -40,12 +40,13 @@ final class CatAPIManager {
 }
 
 // MARK: - Get
+
 extension CatAPIManager {
     func getImages() async throws -> [ImageResponse] {
         try await fetch(endPoint: .images)
     }
 
-    func getFavorite() async throws -> [FavoriteItem]{
+    func getFavorite() async throws -> [FavoriteItem] {
         try await fetch(endPoint: .favorites)
     }
 
@@ -55,29 +56,34 @@ extension CatAPIManager {
         let response: FavoriteCreationResponse = try await fetch(endPoint: .addToFavorite(bodyData: bodyData))
         return response.id
     }
-    
-    func removeFromfavorite(id: Int)async throws{
-        let _ = try await getData(.removeFromFavorite(id: id))
 
+    func removeFromfavorite(id: Int) async throws {
+        do {
+            let _ = try await getData(.removeFromFavorite(id: id))
+        } catch URLSession.APIError.invalidCode(400) {
+            // "不存在最爱 ID"
+        }
     }
 }
 
 // MARK: Fetch
+
 private extension CatAPIManager {
-    func fetch<T: Decodable>(endPoint: Endpoint)async throws -> T {
+    func fetch<T: Decodable>(endPoint: Endpoint) async throws -> T {
         let data = try await getData(endPoint)
-        
+
         /// NOTE: 自定义JSONDecoder解析日期的方式
         let decoder = JSONDecoder()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        
+
         return try decoder.decode(T.self, from: data)
     }
 }
 
 // MARK: Response Bean
+
 extension CatAPIManager {
     struct ImageResponse: Decodable {
         let id: String
@@ -88,8 +94,6 @@ extension CatAPIManager {
     struct FavoriteCreationResponse: Decodable {
         let id: Int
     }
-    
-    
 }
 
 extension CatAPIManager {
@@ -102,24 +106,23 @@ extension CatAPIManager {
 
         var request: URLRequest {
             switch self {
-                
             case .images:
                 return URLRequest(url: "https://api.thecatapi.com/v1/images/search?limit=10")
-                
-            case .addToFavorite(let bodyData):
+
+            case let .addToFavorite(bodyData):
                 var urlRequest = URLRequest(url: "https://api.thecatapi.com/v1/favourites")
                 urlRequest.httpMethod = "POST"
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 urlRequest.httpBody = bodyData
                 return urlRequest
-                
+
             case .favorites:
-                /// TODO: 新增页面参数
+                // TODO: 新增页面参数
                 return URLRequest(url: "https://api.thecatapi.com/v1/favourites")
-                
-            case .removeFromFavorite(let id):
+
+            case let .removeFromFavorite(id):
                 var urlRequest = URLRequest(url: URL(string: "https://api.thecatapi.com/v1/favourites/\(id)")!)
-                
+
                 urlRequest.httpMethod = "DELETE"
                 return urlRequest
             }

@@ -30,11 +30,11 @@ struct FavoriteItem: Decodable {
         let imageContainer = try container.nestedContainer(key: .image)
         imageURL = try imageContainer.decode(URL.self, forKey: "url")
     }
-    
-    init(catImage: CatImageViewModel,id: Int){
+
+    init(catImage: CatImageViewModel, id: Int) {
         self.id = id
-        self.imageID = catImage.id
-        self.createdAt = .now
-        self.imageURL = catImage.url
+        imageID = catImage.id
+        createdAt = .now
+        imageURL = catImage.url
     }
 }

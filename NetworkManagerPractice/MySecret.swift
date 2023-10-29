@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum MySecret{
+enum MySecret {
     static let apiKey = "live_HlzeJacENJi0uCF21R0d3iSV2gdg6apguo7uuWZTAxu8VNrB0lPzlefoSGrfM7i5"
 }

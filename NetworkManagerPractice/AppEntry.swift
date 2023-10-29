@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct AppEntry: App {
-    init(){
+    init() {
         applyTabBarBackground()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             HomeScreen()
@@ -20,9 +20,8 @@ struct AppEntry: App {
     }
 }
 
-
 extension AppEntry {
-    func applyTabBarBackground(){
+    func applyTabBarBackground() {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithTransparentBackground()
         tabBarAppearance.backgroundColor = .systemBackground.withAlphaComponent(0.3)
