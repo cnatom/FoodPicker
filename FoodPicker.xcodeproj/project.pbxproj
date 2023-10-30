@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C0016DD2AEE4B9700CAE12C /* View+MyFriendlyErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0016DC2AEE4B9700CAE12C /* View+MyFriendlyErrorMessage.swift */; };
+		5C0016DF2AEE4EB200CAE12C /* FavoriteItem+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0016DE2AEE4EB200CAE12C /* FavoriteItem+.swift */; };
 		5C1FCD632ACEB0DE00FD6215 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FCD622ACEB0DE00FD6215 /* AppEntry.swift */; };
 		5C1FCD652ACEB0DE00FD6215 /* FoodPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FCD642ACEB0DE00FD6215 /* FoodPickerScreen.swift */; };
 		5C1FCD672ACEB0DF00FD6215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FCD662ACEB0DF00FD6215 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		5C0016DC2AEE4B9700CAE12C /* View+MyFriendlyErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MyFriendlyErrorMessage.swift"; sourceTree = "<group>"; };
+		5C0016DE2AEE4EB200CAE12C /* FavoriteItem+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteItem+.swift"; sourceTree = "<group>"; };
 		5C1FCD5F2ACEB0DE00FD6215 /* FoodPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1FCD622ACEB0DE00FD6215 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		5C1FCD642ACEB0DE00FD6215 /* FoodPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickerScreen.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				5CCBD6A02AEB9D0F00E507B1 /* FavoriteItem.swift */,
+				5C0016DE2AEE4EB200CAE12C /* FavoriteItem+.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				5C9A83A52ADD215900F2DCAC /* CatAPIManager+Env.swift in Sources */,
 				5C6456232ADA90AA006CDBD4 /* CatImageView.swift in Sources */,
 				5CCBD6A32AECDD1E00E507B1 /* Task+.swift in Sources */,
+				5C0016DF2AEE4EB200CAE12C /* FavoriteItem+.swift in Sources */,
 				5C6456172ADA9089006CDBD4 /* URLSession+.swift in Sources */,
 				5C6456242ADA90AA006CDBD4 /* CatImageViewModel.swift in Sources */,
 				5CAA99DB2ADE607B00F14D94 /* CatAPIManager+Stub.swift in Sources */,

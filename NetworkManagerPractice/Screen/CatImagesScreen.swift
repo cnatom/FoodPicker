@@ -18,33 +18,39 @@ struct CatImageScreen: View {
     @State private var errorMessage: String?
 
     var body: some View {
-        VStack {
-            HStack {
-                Text("猫咪图鉴")
-                    .font(.largeTitle.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Button("换一批") {
-                    Task {
-                        await loadRandomImages()
+        ScrollViewReader{ proxy in
+            VStack {
+                HStack {
+                    Text("猫咪图鉴")
+                        .font(.largeTitle.bold())
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Button("换一批") {
+                        Task {
+                            await loadRandomImages()
+                        }
+                    }
+                    .overlay {
+                        if isLoading {
+                            ProgressView()
+                        }
+                    }
+                    .disabled(isLoading)
+                    .buttonStyle(.bordered)
+                    .font(.headline)
+                }.padding(.horizontal)
+                ScrollView {
+                    ForEach(catImages) { catImage in
+                        let isFavourited = favorites.contains(where: \.imageID == catImage.id)
+                        CatImageView(catImage, isFavourited: isFavourited) {
+                            await toggleFavorite(catImage)
+                        }
+                        .id(catImage.id)
+                    }
+                    .onChange(of: catImages.first) {
+                        proxy.scrollTo(catImages.first?.id)
                     }
                 }
-                .overlay {
-                    if isLoading {
-                        ProgressView()
-                    }
-                }
-                .disabled(isLoading)
-                .buttonStyle(.bordered)
-                .font(.headline)
-            }.padding(.horizontal)
-
-            ScrollView {
-                ForEach(catImages) { catImage in
-                    let isFavourited = favorites.contains(where: \.imageID == catImage.id)
-                    CatImageView(catImage, isFavourited: isFavourited) {
-                        await toggleFavorite(catImage)
-                    }
-                }
+                
             }
         }
         .alert(errorMessage: $errorMessage)
@@ -81,18 +87,6 @@ private extension CatImageScreen {
         } catch {
             errorMessage = "无法更新最爱"
         }
-    }
-}
-
-extension [FavoriteItem] {
-    mutating func add(_ cat: CatImageViewModel, apiManager: CatAPIManager) async throws {
-        let id = try await apiManager.addToFavorite(imageID: cat.id)
-        append(.init(catImage: cat, id: id))
-    }
-
-    mutating func remove(at index: Int, apiManager: CatAPIManager) async throws {
-        try await apiManager.removeFromfavorite(id: self[index].id)
-        remove(at: index)
     }
 }
 
